@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grinnell AppDev</title>
+    <meta
+      name="description"
+      content="The Open Source Development Team at Grinnell COllege"
+    />
+    <meta name="author" content="AppDev" />
+    <link rel="icon" type="image/png" href="imgs/AppDevLogoLight.png" />
+    <script
+      src="https://kit.fontawesome.com/dde7f8e845.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <button class="navbar__logo">
+        <img
+                src="imgs/AppDevLogoLight.png"
+                alt="glicious icon Photo"
+                class="about__avatar"
+              /> 
+      </button>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item active" data-link="#about">Apps</li>
+        <li class="navbar__menu__item" data-link="#work">Team</li>
+        <li class="navbar__menu__item" data-link="#testimonials">
+          About us
+        </li>
+        <li class="navbar__menu__item" data-link="#contact">Apply</li>
+      </ul>
+      <!-- Toggle Button -->
+      <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+      <div class="home__container">
+        <img
+          src="imgs/AppDevLogoLight.png"
+          alt="AppDev Profile Photo"
+          class="home__avatar"
+        />
+        <h1 class="home__title">Grinnell AppDev</h1>
+        <h2 class="home__description">
+          Reimagining Tomorrow's Invention. 
+        </h2>
+        <button class="home__contact">Apply today!</button>
+      </div>
+    </section>
+
+    <!-- About -->
+
+    <section id="about" class="section">
+      <div class="section__container">
+        <h1>1000+ people use our apps</h1>
+        <p>Every new product is the result of people working together. We do it because it creates the best experience for students.</p>
+        <div class="about__majors">
+          <div class="major">
+            <div class="major__icon">
+              <img
+                src="imgs/gliciousicon.png"
+                alt="glicious icon Photo"
+                class="about__avatar"
+              />
+            </div>
+            <h2 class="major__title">Glicious</h2>
+            <p class="major__description">
+              Browse weekly menus, <br />
+              Check opening hours.
+            </p>
+            <div class="major__links">
+              <a href="https://github.com/kimwooch/glicious-backend" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://apps.apple.com/us/app/id1528601452" target="_blank">
+                <i class="fab fa-app-store-ios"></i>              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.appdevgrinnell.glicious" target="_blank">
+                <i class="fab fa-google-play"></i>              </a>
+            </div>
+          </div>
+          <div class="major">
+            <div class="major__icon">
+              <img
+                src="imgs/gcevents.png"
+                alt="gcevents icon Photo"
+                class="about__avatar"
+              />
+            </div>
+            <h2 class="major__title">GCEvents</h2>
+            <p class="major__description">
+              Find nearby events, <br />
+              Save them in your calendar.
+            </p>
+            <div class="major__links">
+              <a href="https://github.com/GrinnellAppDev/Grinnell-Events-iOS" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://apps.apple.com/kr/app/gcevents/id1502850343" target="_blank">
+                <i class="fab fa-app-store-ios"></i>              </a>
+              <a href="https://play.google.com/store/apps/details?id=edu.grinnell.events&hl=en" target="_blank">
+                <i class="fab fa-google-play"></i>              </a>
+            </div>
+          </div>
+          <div class="major">
+            <div class="major__icon">
+              <img
+                src="imgs/sparcs3.png"
+                alt="sparcs icon Photo"
+                class="about__avatar"
+              />
+            </div>
+            <h2 class="major__title">GCPublications</h2>
+            <p class="major__description">
+              The Scarlet & Black <br />
+              Never miss a campus update!
+            </p>
+            <div class="major__links">
+              <a href="https://github.com/GrinnellAppDev/Publications-iOS" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://apps.apple.com/kr/app/gcpublications/id1503284438" target="_blank">
+                <i class="fab fa-app-store-ios"></i>              </a>
+              <a href="https://play.google.com/store/apps/details?id=edu.grinnell.events&hl=en" target="_blank">
+                <i class="fab fa-google-play"></i>              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section">
+      <div class="section__container">
+        <h1>The AppDev Team</h1>
+        <h3>
+          You'll be build ideas with 
+          highly open-minded and collaborative teams to
+          bring a meaningful change to our college experience.</h3>
+        </h3>
+        <div class = "group__photos">
+          <img
+            src="imgs/groupphoto2016.jpg"
+            alt="group icon Photo"
+            class="group__avatar"
+          />
+        </div>
+        <div class="work__categories">
+          <button class="category__btn selected" data-filter="Leadership">
+            Leadership <span class="category__count">1</span>
+          </button>
+          <button class="category__btn" data-filter="Engineer">
+            Engineers <span class="category__count">3</span>
+          </button>
+          <button class="category__btn" data-filter="Designer">
+            Designer <span class="category__count">1</span>
+          </button>
+          <button class="category__btn" data-filter="MarkOps">
+            MarkOps <span class="category__count">1</span>
+          </button>
+          <button class="category__btn" data-filter="Alumni">
+            Alumni <span class="category__count">1</span>
+          </button>
+        </div>
+        <div class="work__projects">
+          <a href="https://www.linkedin.com/in/kevin-kim-965241139/" class="project" target="blank" data-type="Leadership">
+            <img
+              class="project__img"
+              src="imgs/portrait1.jpg"
+              alt="Youtube"
+            />
+            <div class="project__description">
+              <h3>Kevin Kim</h3>
+              <span>Hello World</span>
+            </div>
+          </a>
+          <a href="#" class="project invisible" target="blank" data-type="Engineer">
+            <img
+              class="project__img"
+              src="imgs/portrait1.jpg"
+              alt="Youtube"
+            />
+            <div class="project__description">
+              <h3>Engineer</h3>
+              <span>Clone engineer</span>
+            </div>
+          </a>
+          <a href="#" class="project invisible" target="blank" data-type="Engineer">
+            <img
+              class="project__img"
+              src="imgs/portrait1.jpg"
+              alt="Youtube"
+            />
+            <div class="project__description">
+              <h3>Engineer</h3>
+              <span>Clone engineer</span>
+            </div>
+          </a>
+          <a href="#" class="project invisible" target="blank" data-type="Engineer">
+            <img
+              class="project__img"
+              src="imgs/portrait1.jpg"
+              alt="Youtube"
+            />
+            <div class="project__description">
+              <h3>Engineer</h3>
+              <span>Clone engineer</span>
+            </div>
+          </a>
+          <a href="#" class="project invisible" target="blank" data-type="Designer">
+            <img
+              class="project__img"
+              src="imgs/portrait1.jpg"
+              alt="Youtube"
+            />
+            <div class="project__description">
+              <h3>Designer</h3>
+              <span>Clone designer</span>
+            </div>
+          </a>
+          <a href="#" class="project invisible" target="blank" data-type="MarkOps">
+            <img
+              class="project__img"
+              src="imgs/portrait1.jpg"
+              alt="Youtube"
+            />
+            <div class="project__description">
+              <h3>Business</h3>
+              <span>Clone business</span>
+            </div>
+          </a>
+          <a href="#" class="project invisible" target="blank" data-type="Alumni">
+            <img
+              class="project__img"
+              src="imgs/portrait1.jpg"
+              alt="Youtube"
+            />
+            <div class="project__description">
+              <h3>Alumni</h3>
+              <span>Mr. Alumni</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+      <div class="section__container">
+        <h1>Share what you want to explore.</h1>
+        <h3>We are community of thinkers and doers who come together to embrace the spirit of humanity through technology.</h3>
+        <div class="testimonials">
+          <div class="testimonial">
+            <img
+              src="imgs/maijid.jpeg"
+              alt="People"
+              class="testimonial__avatar"
+            />
+            <div class="testimonial__speech-bubble">
+              <p>
+                "We're living in an increasingly software-centric world, and this gives us the ability to integrate technology into the domain of these social problems. Since technology is malleable, it can be used to tackle some of these problems in brand new ways."
+              </p>
+              <p class="name"><a href="https://www.linkedin.com/in/maijid/">Maijid Moujaled</a> / Ex-Founder of Grinnell AppDev</p>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__speech-bubble">
+              <p>
+                "When people from different fields come together to work on a project, the resulting product is better than it would be with a homogenous group."
+              </p>
+              <p class="name"><a href="https://www.linkedin.com/in/triestpa/">Patrick Triest</a> / Ex-Leader and Head of Android Development</p>
+            </div>
+            <img
+              src="imgs/patrick.jpeg"
+              alt="People"
+              class="testimonial__avatar"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact -->
+    <section id="contact" class="section">
+      <h1 class="contact__title">Ideas to Production.</h1>
+      <h2 class="contact__email"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Pp5PUsr6ZE-z7K2yuu6IBx3ELqGbYR5JhnfjM4IH2z1UNzNYSFE4Rlg2R0hUVEcyRks5SEUzNzM2Vi4u">Click here to apply</a></h2>
+      <div class="contact__links">
+        <a href="https://github.com/GrinnellAppDev" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/grinnell-appdev/about/" target="_blank">
+          <i class="fa fa-linkedin-square"></i>
+        </a>
+      </div>
+      <p class="contact__rights">© 2020 AppDev - All rights reserved</p>
+    </section>
+    <!-- Arrow up -->
+    <button class="arrow-up">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </body>
+</html>
