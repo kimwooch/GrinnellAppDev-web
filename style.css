@@ -267,7 +267,7 @@ p {
   border-radius: var(--size-border-radius);
 }
 
-/*Work*/
+/*Team*/
 .work__categories {
   margin: 50px;
   justify-content: center;
@@ -431,6 +431,9 @@ p {
 }
 .testimonial__speech-bubble a {
   color: var(--color-dark-pink);
+}
+.testimonial__speech-bubble a:hover {
+  color: var(--color-blackish);
 }
 
 /* Contact */
