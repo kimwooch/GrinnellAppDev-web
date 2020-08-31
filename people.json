@@ -1,0 +1,46 @@
+[
+  {
+    "Leadership": [
+      {
+        "name": "Kevin",
+        "title": "hello of sth",
+        "link": "https://www.linkedin.com/in/duongduy",
+        "image": "imgs/maijid.jpeg"
+      },
+      {
+        "name": "Kevin",
+        "title": "sth of sth",
+        "link": "https://www.linkedin.com/in/duongduy",
+        "image": "imgs/maijid.jpeg"
+      },
+      {
+        "name": "Kevin",
+        "title": "c of sth",
+        "link": "https://www.linkedin.com/in/duongduy",
+        "image": "imgs/maijid.jpeg"
+      }
+    ]
+  },
+  {
+    "Engineer": [
+      {
+        "name": "Kevin",
+        "title": "d of sth",
+        "link": "https://www.linkedin.com/in/duongduy",
+        "image": "imgs/maijid.jpeg"
+      },
+      {
+        "name": "Kevin",
+        "title": "e of sth",
+        "link": "https://www.linkedin.com/in/duongduy",
+        "image": "imgs/maijid.jpeg"
+      },
+      {
+        "name": "Kevin",
+        "title": "f of sth",
+        "link": "https://www.linkedin.com/in/duongduy",
+        "image": "imgs/maijid.jpeg"
+      }
+    ]
+  }
+]

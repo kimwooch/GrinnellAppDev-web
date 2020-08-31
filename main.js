@@ -1,12 +1,54 @@
 'use strict';
+let data = [
+  {
+    name: 'Arbhy',
+    type: 'Leadership',
+    title: 'Lead of sth',
+    link: 'https://www.linkedin.com/in/duongduy',
+    image: 'imgs/maijid.jpeg',
+  },
+  {
+    name: 'Bravo',
+    type: 'Leadership',
+    title: 'lead of sth else',
+    link: 'https://www.linkedin.com/in/duongduy',
+    image: 'imgs/maijid.jpeg',
+  },
+  {
+    name: 'Charlie',
+    type: 'Leadership',
+    title: 'Lead of sth special',
+    link: 'https://www.linkedin.com/in/duongduy',
+    image: 'imgs/maijid.jpeg',
+  },
+  {
+    name: 'Delta',
+    type: 'Engineer',
+    title: 'Engineer of ios',
+    link: 'https://www.linkedin.com/in/duongduy',
+    image: 'imgs/maijid.jpeg',
+  },
+  {
+    name: 'Elephant',
+    type: 'Engineer',
+    title: 'Engineer of sth',
+    link: 'https://www.linkedin.com/in/duongduy',
+    image: 'imgs/maijid.jpeg',
+  },
+  {
+    name: 'Fox',
+    type: 'Engineer',
+    title: 'Engineer of sth else',
+    link: 'https://www.linkedin.com/in/duongduy',
+    image: 'imgs/maijid.jpeg',
+  },
+];
 
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
 document.addEventListener('scroll', () => {
-  console.log(window.scrollY);
-  console.log(navbarHeight);
   if (window.scrollY > navbarHeight) {
     navbar.classList.add('navbar__dark');
   } else {
@@ -69,15 +111,56 @@ navbarLogo.addEventListener('click', () => {
 });
 //Projects
 
+//json data fetch to the file
+let work = document.querySelector('div.work__projects');
+for (var i = 0; i < data.length; i++) {
+  let projectLink = document.createElement('a');
+  projectLink.href = data[i].link;
+  if (data[i].type != 'Leadership') {
+    projectLink.className = 'project ${data[i].type} invisible';
+  } else {
+    projectLink.className = 'project ${data[i].type}';
+  }
+  projectLink.target = 'blank';
+  projectLink.dataType = data[i].type;
+
+  let image = document.createElement('img');
+  image.className = 'project__img';
+  image.src = data[i].image;
+  image.alt = 'Youtube';
+  projectLink.appendChild(image);
+
+  let description = document.createElement('div');
+  description.className = 'project__description';
+
+  let name = document.createElement('h3');
+  name.appendChild(document.createTextNode(data[i].title));
+  let span = document.createElement('span');
+  span.appendChild(document.createTextNode(data[i].name));
+  description.appendChild(name);
+  description.appendChild(span);
+
+  projectLink.appendChild(description);
+  work.appendChild(projectLink);
+}
+
+//selector effect in projects
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
+let obs = document.getElementsByClassName('Leadership');
 
 workBtnContainer.addEventListener('click', (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter == null) {
     return;
   }
+  //makes the previously selected button invisible
+  Array.from(obs).forEach((ob) => {
+    if (filter != ob.dataset.type) {
+      ob.classList.add('invisible');
+    }
+  });
   //Remove selection from the previous item and select the new one
   const active = document.querySelector('.category__btn.selected');
   active.classList.remove('selected');
@@ -86,12 +169,13 @@ workBtnContainer.addEventListener('click', (e) => {
   target.classList.add('selected');
 
   projectContainer.classList.add('anim-out');
+  obs = document.getElementsByClassName(filter);
+  console.log(Array.from(obs));
   setTimeout(() => {
-    projects.forEach((project) => {
-      if (filter === project.dataset.type) {
-        project.classList.remove('invisible');
-      } else {
-        project.classList.add('invisible');
+    //makes selected buttons visible
+    Array.from(obs).forEach((ob) => {
+      if (filter === ob.dataset.type) {
+        ob.classList.remove('invisible');
       }
     });
     projectContainer.classList.remove('anim-out');
