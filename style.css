@@ -425,7 +425,12 @@ p {
   background-color: var(--color-white);
   border-radius: var(--size-border-radius);
 }
-
+.privacy a {
+  color: var(--color-blackish);
+}
+.privacy a:hover {
+  color: var(--color-dark-pink);
+}
 .testimonial__speech-bubble p {
   color: var(--color-light-grey);
 }
@@ -447,7 +452,11 @@ p {
   text-align: center;
   color: var(--color-white);
 }
-
+.privacy__policy {
+  font-size: 18px;
+  text-align: center;
+  color: var(--color-white);
+}
 .contact__title {
   margin: 32px 0;
 }
