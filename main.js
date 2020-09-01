@@ -1,45 +1,59 @@
 'use strict';
 let data = [
   {
+    name: 'Kevin Kim',
+    type: 'Leadership',
+    title: 'Lead',
+    link: '#',
+    image: 'imgs/portrait1.jpg',
+  },
+  {
     name: 'Arbhy',
     type: 'Leadership',
     title: 'Lead of sth',
-    link: 'https://www.linkedin.com/in/duongduy',
+    link: '#',
     image: 'imgs/maijid.jpeg',
   },
   {
     name: 'Bravo',
     type: 'Leadership',
     title: 'lead of sth else',
-    link: 'https://www.linkedin.com/in/duongduy',
+    link: '#',
     image: 'imgs/maijid.jpeg',
   },
   {
     name: 'Charlie',
     type: 'Leadership',
     title: 'Lead of sth special',
-    link: 'https://www.linkedin.com/in/duongduy',
+    link: '#',
     image: 'imgs/maijid.jpeg',
   },
   {
     name: 'Delta',
     type: 'Engineer',
     title: 'Engineer of ios',
-    link: 'https://www.linkedin.com/in/duongduy',
+    link: '#',
     image: 'imgs/maijid.jpeg',
   },
   {
-    name: 'Elephant',
-    type: 'Engineer',
-    title: 'Engineer of sth',
-    link: 'https://www.linkedin.com/in/duongduy',
+    name: 'Ellice',
+    type: 'Designer',
+    title: 'Designer of sth',
+    link: '#',
+    image: 'imgs/portrait1.jpg',
+  },
+  {
+    name: 'Fox',
+    type: 'MarkOps',
+    title: 'MarkOps of sth else',
+    link: '#',
     image: 'imgs/maijid.jpeg',
   },
   {
     name: 'Fox',
-    type: 'Engineer',
-    title: 'Engineer of sth else',
-    link: 'https://www.linkedin.com/in/duongduy',
+    type: 'Alumni',
+    title: 'Alumni',
+    link: '#',
     image: 'imgs/maijid.jpeg',
   },
 ];
@@ -116,13 +130,14 @@ let work = document.querySelector('div.work__projects');
 for (var i = 0; i < data.length; i++) {
   let projectLink = document.createElement('a');
   projectLink.href = data[i].link;
-  if (data[i].type != 'Leadership') {
-    projectLink.className = 'project ${data[i].type} invisible';
+  let type = data[i].type;
+  if (data[i].type === 'Leadership') {
+    projectLink.className = `project ${type}`;
   } else {
-    projectLink.className = 'project ${data[i].type}';
+    projectLink.className = `project ${type} invisible`;
   }
   projectLink.target = 'blank';
-  projectLink.dataType = data[i].type;
+  projectLink.dataset.type = data[i].type;
 
   let image = document.createElement('img');
   image.className = 'project__img';
@@ -169,8 +184,8 @@ workBtnContainer.addEventListener('click', (e) => {
   target.classList.add('selected');
 
   projectContainer.classList.add('anim-out');
-  obs = document.getElementsByClassName(filter);
   console.log(Array.from(obs));
+  obs = document.getElementsByClassName(filter);
   setTimeout(() => {
     //makes selected buttons visible
     Array.from(obs).forEach((ob) => {
@@ -179,7 +194,7 @@ workBtnContainer.addEventListener('click', (e) => {
       }
     });
     projectContainer.classList.remove('anim-out');
-  }, 300);
+  }, 150);
 });
 
 function scrollIntoView(selector) {
