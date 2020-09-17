@@ -26,7 +26,7 @@ let data = [
     type: 'Leadership',
     title: 'Senior iOS Engineer',
     link: 'https://www.linkedin.com/in/grace-tsui-5082b6168/',
-    image: 'imgs/members/GraceT.jpg',
+    image: 'imgs/members/GraceT.jpeg',
   },
   {
     name: 'Quang Nguyen',
@@ -40,7 +40,7 @@ let data = [
     type: 'IEngineer',
     title: 'Senior iOS Engineer',
     link: 'linkedin.com/in/grace-tsui-5082b6168/',
-    image: 'imgs/members/GraceT.jpg',
+    image: 'imgs/members/GraceT.jpeg',
   },
   {
     name: 'Hanfeng Lu',
