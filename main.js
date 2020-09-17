@@ -28,7 +28,6 @@ let data = [
     link: 'https://www.linkedin.com/in/grace-tsui-5082b6168/',
     image: 'imgs/members/GraceT.jpg',
   },
-
   {
     name: 'Quang Nguyen',
     type: 'IEngineer',
